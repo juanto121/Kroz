@@ -12,8 +12,9 @@ var Kroz = (function(){
 	kroz.loadComplete = function(){
 		console.log("done main.");
 		this.hero = new Hero(this.assets);
-		this.hero_sprite = new createjs.Sprite(this.hero.data, "run");
+		this.hero_sprite = new createjs.Sprite(this.hero.data, "walk_down");
 		this.hero_sprite.framerate = 8;
+		this.hero_sprite.setTransform(0,0,1.5,1.5);
 		this.stage.addChild(this.hero_sprite);
 
 		createjs.Ticker.timingMode = createjs.Ticker.RAF;
