@@ -39,7 +39,7 @@ var Hero = (function(){
 				"walk_up":[9,11]
 			}
 		});
-		this.hero_sprite = new createjs.Sprite(this.data, "walk_down");
+		this.hero_sprite = new createjs.Sprite(this.data);
 		this.hero_sprite.framerate = 8;
 		this.hero_sprite.setTransform(this.x,this.y,1,1);
 	}

@@ -7,7 +7,8 @@ var Assets = (function(){
 		this.completed = handleComplete;
 		this.manifest = [{src:"assets/gandor_sprite.png",id:"gandor"},
 						 {src:"assets/grass_bg.png", id:"grass"},
-						 {src:"assets/sign.png", id:"sign"}];
+						 {src:"assets/sign.png", id:"sign"},
+						 {src:"assets/flower.png", id:"flower"}];
 		this.loader = new createjs.LoadQueue(false);
 		this.startPreload();
 	}
