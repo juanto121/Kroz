@@ -1,0 +1,15 @@
+body{
+	background-color: #191919;
+}
+.title{
+	font-family: 'VT323';
+	font-size: 70px;
+	text-align: center;
+	color: white;
+}
+
+.canvas{
+	width: 960px;
+	margin: 0 auto;
+	border-radius: 10px;
+}
