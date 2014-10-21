@@ -5,7 +5,9 @@ var Assets = (function(){
 	var assets = Assets.prototype;
 	assets.init = function(handleComplete){
 		this.completed = handleComplete;
-		this.manifest = [{src:"assets/gandor_sprite.png",id:"gandor"}];
+		this.manifest = [{src:"assets/gandor_sprite.png",id:"gandor"},
+						 {src:"assets/grass_bg.png", id:"grass"},
+						 {src:"assets/sign.png", id:"sign"}];
 		this.loader = new createjs.LoadQueue(false);
 		this.startPreload();
 	}

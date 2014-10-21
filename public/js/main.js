@@ -12,16 +12,18 @@ var Kroz = (function(){
 	kroz.loadComplete = function(){
 		console.log("done main.");
 		this.hero = new Hero(this.assets);
-		this.hero_sprite = new createjs.Sprite(this.hero.data, "walk_down");
-		this.hero_sprite.framerate = 8;
-		this.hero_sprite.setTransform(0,0,1.5,1.5);
-		this.stage.addChild(this.hero_sprite);
+		
+		this.stage.addChild(new createjs.Bitmap(this.assets.loader.getResult("grass")),
+							new createjs.Bitmap(this.assets.loader.getResult("sign")),
+							this.hero.hero_sprite);
 
 		createjs.Ticker.timingMode = createjs.Ticker.RAF;
 		createjs.Ticker.addEventListener("tick",this.tick.bind(this));
 	}
 	kroz.tick = function(event){
+		this.hero.move();
 		this.stage.update(event);
+
 	}
 	return Kroz;
 })();
